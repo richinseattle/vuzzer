@@ -1,3 +1,7 @@
+ :point_right: VUzzer 64-bit is available at:<br/>
+ https://github.com/vusec/vuzzer64
+==========
+
 VUzzer
 ===========
 
@@ -7,6 +11,8 @@ This Project depends heavily on a  modeified version of DataTracker, which in tu
 
 #### Running the VUzzer:
 Please see wikiHOWTO.md for a step-by-step procedure to run the VUzzer. This file also contains explanation for most of the options.
+
+:point_right: **NOTE: VUzzer's taintflow analysis does not work on binaries compiled with sanitizers pass (e.g. address sanitizer). Therefore, do not involve VUzzer in an experiment where sanitizer enabled binaries are used.**
 
 
 Requirements
@@ -32,7 +38,7 @@ Installation
 -------------
 First do `cd vuzzer` and then
 ```
-export PIN_ROOT=($pwd)/pin
+export PIN_ROOT=$(pwd)/pin
 ```
 If initially libdft has been made then go to support/libdft/src and do `make clean`
 Again in the parent folder execute following
